@@ -1,0 +1,155 @@
+/* Paleta de Cores #000000, #9e9e9e, #e0e0e0, #f5f5f5, #333333;  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+* {
+    font-family: "Poppins";
+}
+
+body {
+    height: 100%;
+}
+
+.container-cards {
+    margin-top: 15vh;
+}
+
+.container-aprender {
+    margin-top: 20vh;
+}
+
+.proposito{
+    border: #2ecc71 solid;
+    height: 2,8em;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+.texto-corpo{
+    text-align: center;
+}
+.nav-link {
+    color: #000000;
+}
+
+.nav-link {
+    color: #000000;
+}
+.container-titulolista{
+    color: #000000;
+    border: solid #2ecc71;
+    border-radius: 8px;
+    margin-top: 8em;
+    margin-bottom: 6em;
+}
+.linha{
+    color: #2ecc71;
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+    height: 0.0.1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+.list-group{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20em;
+    width: 400px;
+    height: 500px;
+}
+
+.container-list-group {
+    background-color: white;
+    display: flex;
+    -ms-transform: skewY(4deg);
+    -webkit-transform: skewY(4deg);
+    transform: skewY(4deg);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 3px 3px 5px #e0e0e0;
+    margin-bottom: 10vh;
+}
+
+.list-group-item, .cursos, .proposito {
+    -ms-transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    transform: skewY(-4deg);
+}
+.list-group-item{
+    margin-top: 10em;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    color: #f5f5f5;
+    background-color: #2ecc71;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: auto;
+}
+
+#logotipo {
+    width: 60px;
+}
+
+#deforma {
+    font-family: "Merienda";
+    color: #e0e0e0;
+}
+
+.btn {
+    background-color: #f5f5f5;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    box-shadow: 2px 3px 3px 0 #333333;
+}
+
+
+
+.card-img-top{
+    width: 253px;
+    height: 250px;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 350px;
+    border: solid 3px #000000;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px #333333;
+    background-color: #f5f5f5;
+    margin: 6px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 1px;
+}
+
+.icons{
+    text-align: center;
+
+}
+ 
+.card-title{
+    text-align: center;
+    
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.form-group{
+    margin-left: 300px;
+    margin-right: 300px;
+}

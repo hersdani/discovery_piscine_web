@@ -1,0 +1,18 @@
+Here's an explanation of each attribute in the menu.css file:
+
+    .dropdown: This class styles the container <div> that wraps around the dropdown button and the dropdown content. It sets the position to relative (so that child elements can be positioned relative to this container) and makes it an inline block (so that it takes up only as much width as necessary).
+
+    .dropbtn: This class styles the dropdown button itself. It sets the background color to medium blue, text color to white, padding around the button, font size, removes the border, and sets the cursor to a pointer (usually a hand icon) when hovering over the button.
+
+    .dropdown-content: This class styles the dropdown menu content that appears when you hover over the dropdown button. It sets the initial display to none (hidden), positions it absolutely (so it's positioned relative to its nearest positioned ancestor, which is the .dropdown container), sets the background color to light sky blue, defines a minimum width, adds a box shadow for a subtle 3D effect, and sets a z-index to ensure it appears above other elements.
+
+    .dropdown-content a: This styles the links inside the dropdown content. It sets the text color to black, adds padding around each link, removes text decoration (usually underlines), and displays the links as block elements (each link takes up a full line).
+
+    .dropdown-content a:hover: This styles the links when hovered over. It changes the background color to light blue, giving a visual feedback to the user when they hover over a link.
+
+    .dropdown:hover .dropdown-content: This selector is used to show the dropdown menu when the dropdown button is hovered over. It changes the display of the dropdown content to block, making it visible.
+
+    .dropdown:hover .dropbtn: This selector changes the background color of the dropdown button when the dropdown content is shown. It sets the background color to blue when the dropdown content is displayed.
+
+These CSS attributes work together to create a dropdown menu with specific styles and behavior when interacting with the menu button and links.
+

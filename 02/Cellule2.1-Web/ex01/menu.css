@@ -1,0 +1,70 @@
+
+/* The container <div> - needed to position the dropdown content. This class
+styles the container <div> that wraps around the dropdown button and the
+dropdown content. It sets the position to relative (so that child elements
+can be positioned relative to this container) and makes it an inline block
+(so that it takes up only as much width as necessary). */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style The Dropdown Button. This class styles the dropdown button itself.
+It sets the background color to medium blue, text color to white, padding
+around the button, font size, removes the border, and sets the cursor to a
+pointer (usually a hand icon) when hovering over the button. */
+.dropbtn {
+  background-color: mediumblue;
+  color: white;
+  padding: 21px;
+  font-size: 21px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default). This class styles the dropdown menu
+content that appears when you hover over the dropdown button. It sets the
+initial display to none (hidden), positions it absolutely (so it's positioned
+relative to its nearest positioned ancestor, which is the .dropdown container),
+ sets the background color to light sky blue, defines a minimum width, adds a
+box shadow for a subtle 3D effect, and sets a z-index to ensure it appears
+above other elements. */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightskyblue;
+  min-width: 210px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.21);
+  z-index: 1;
+}
+
+/* Links inside the dropdown. This styles the links inside the dropdown
+content. It sets the text color to black, adds padding around each link,
+removes text decoration (usually underlines), and displays the links as block
+elements (each link takes up a full line). */
+.dropdown-content a {
+  color: black;
+  padding: 16px 21px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover. This styles the links when hovered
+over. It changes the background color to light blue, giving a visual feedback
+to the user when they hover over a link. */
+.dropdown-content a:hover {background-color: lightblue}
+
+/* Show the dropdown menu on hover. This selector is used to show the dropdown
+menu when the dropdown button is hovered over. It changes the display of the
+dropdown content to block, making it visible. */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown
+content is shown. This selector changes the background color of the dropdown
+button when the dropdown content is shown. It sets the background color to
+blue when the dropdown content is displayed. */
+.dropdown:hover .dropbtn {
+  background-color:blue;
+}

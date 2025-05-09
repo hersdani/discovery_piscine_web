@@ -1,0 +1,89 @@
+/* Sets the height of the body and HTML elements to 100% of the viewport
+height. Removes default margins and paddings from the body and HTML elements.*/
+body, html { height: 100%; margin: 0; padding: 0; }
+
+/* Styles <h1> elements with the Montserrat font or a sans-serif fallback,
+centered text alignment, a font size of 80 pixels, and removes margins and
+paddings. */
+h1 {font-family: "Montserrat", sans-serif; text-align: center; font-size: 80px; margin: 0; padding: 0; }
+
+/* Styles <h2> elements with the Impact font or a sans-serif fallback,
+centered text alignment, a font size of 80 pixels, and removes margins and
+paddings. */
+h2 {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center; font-size: 80px; margin: 0; padding: 0; }
+
+/* Sets the default font for the body text with several fallback options.
+Removes the default margin from the body. Centers text alignment for the
+body content. */
+body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin: 0; text-align: center; }
+
+/* Styles a class named .middle with auto height, a black background color,
+specific font-family options, a font size of 36 pixels, and white text color.*/
+.middle {height:auto; background-color:black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:36px; color:white;}
+
+/* Removes top and bottom margins from <p> elements to eliminate any extra spacing. */
+p {margin-top: 0px; margin-bottom: 0px;}
+
+/* parallax part */
+/* 1) Sets the background image for the .parallax-1 class. Assigns a z-index
+of 1 to the element. */
+.parallax-1 {
+	/* The image used */
+	background-image: url('https://static.euronews.com/articles/stories/07/44/88/84/1920x1080_cmsv2_c889809d-7c40-57ad-b930-3497e2efc911-7448884.jpg');
+	z-index: 1;
+	}
+
+/* 2) Sets the background image for the .parallax-2 class. Assigns a z-index
+of 1 to the element. */
+.parallax-2 {
+	/* The image used */
+	background-image: url('https://hemank101.wordpress.com/wp-content/uploads/2015/01/vlcsnap-2011-01-17-16h21m27s224.png?w=1280');
+	z-index: 1;
+	}
+
+/* Sets the height of .parallax-1 and .parallax-2 elements to 100% of the
+viewport height. Creates a parallax scrolling effect by fixing the background
+attachment, centering the background position, preventing background repeat,
+and covering the background size. */
+.parallax-1, .parallax-2 {
+		/* Full height */
+		height: 100%;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+/* Styles a container for text within parallax sections. Positions the text
+container in the center using relative positioning and transforms.
+Sets the background color to transparent, text color to white, and text
+alignment to center. Removes margins from the text container. Adjusts opacity
+to 0.8 for a semi-transparent effect (adjustable). */
+.text-container {
+	position: relative; /* establishes the positioning context for the element. */
+	/* initially moves the element's top-left corner to the center of its container. */
+	top: 50%;
+	left: 50%;
+	/* This property applies a 2D transformation to the element, specifically
+	a translation. The translate() function moves the element along the X and
+	Y axes by the specified percentage values. In this case, -50% moves the
+	element up by 50% of its own height and left by 50% of its own width. */
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+	color: white;
+	text-align: center;
+	margin: 0;
+	opacity: 0.8;
+	}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if
+needed. Targets devices with a maximum screen width of 1366 pixels (e.g.,
+tablets and phones). Changes the background attachment of .parallax-1 and
+.parallax-2 elements to scroll, disabling the parallax scrolling effect on
+smaller devices. */
+@media only screen and (max-device-width: 1366px) {
+	.parallax-1, .parallax-2 { background-attachment: scroll;
+	}
+  }

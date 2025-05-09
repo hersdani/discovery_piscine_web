@@ -1,0 +1,31 @@
+The CSS code in `parallax.css` is used to create a parallax scrolling effect for two different background images (`parallax-1` and `parallax-2`). Below is an explanation of each part of the CSS code:
+
+1. `body, html { height: 100%;}`: This ensures that the body and HTML elements take up the full height of the viewport.
+
+2. `h1 {font-family: "Montserrat", sans-serif; text-align: center;}`: Styles the `<h1>` elements to use the Montserrat font and be centered horizontally.
+
+3. `h2 {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;}`: Styles the `<h2>` elements to use the Impact font (or fallback fonts) and be centered horizontally.
+
+4. `body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin: 0; text-align: center;}`: Sets the default font for the body text and centers text horizontally within the body. It also removes any default margins.
+
+5. `.middle {height:auto; background-color:black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:36px; color:white;}`: Styles a class named `.middle`, setting its height to auto, background color to black, font family, font size, and text color.
+
+6. `.parallax-1` and `.parallax-2`: These classes are used for the parallax scrolling sections with background images. They set the background image, height to 100% of the viewport, and create the parallax scrolling effect by fixing the background attachment, centering the background position, ensuring no repeat, and covering the background size.
+
+7. `.text-container`: Styles a container for text within the parallax sections. It positions the text in the center of its container using absolute positioning and transforms, sets the background color to transparent, text color to white, aligns the text to the center, removes margins, and adjusts opacity for a semi-transparent effect.
+
+8. `@media only screen and (max-device-width: 1366px) { .parallax-1, .parallax-2 { background-attachment: scroll; } }`: This media query targets devices with a maximum screen width of 1366px (e.g., tablets and phones) and changes the background attachment of the parallax sections to scroll, effectively turning off the parallax scrolling effect on smaller devices.
+
+Overall, this CSS file combines various styles to create a visually appealing parallax scrolling effect with background images and centered text containers.
+
+The @media rule in CSS is used to apply specific styles based on certain conditions, such as the device's screen size, orientation, or other media features. In your parallax.css, the @media rule is used to target devices with a maximum screen width of 1366px. Let's break down the @media rule and its components:
+
+    @media: This is the keyword that defines a media query in CSS. It indicates that the following block of CSS rules should only apply if the specified conditions are met.
+
+    only screen: This part of the media query specifies that the styles should apply only to screens (as opposed to other media types like print or speech). It's common to use only screen to target devices with screens.
+
+    (max-device-width: 1366px): This is the actual media feature and value being targeted. In this case, it's specifying a maximum device width of 1366 pixels. This means that the styles within the media query will only be applied to devices whose screens have a width of 1366 pixels or less.
+
+    { .parallax-1, .parallax-2 { background-attachment: scroll; } }: This is the block of CSS rules that will be applied if the conditions specified in the media query are met. In this case, it changes the background-attachment property of .parallax-1 and .parallax-2 classes to scroll. This effectively turns off the parallax scrolling effect for devices with a screen width of 1366 pixels or less, as the background image will now scroll along with the content rather than staying fixed during scrolling.
+
+So, in summary, the @media rule with only screen and (max-device-width: 1366px) targets devices with screens and a maximum width of 1366 pixels. The styles inside the media query block then adjust the behavior of the parallax effect for these devices by changing the background attachment property.

@@ -1,0 +1,65 @@
+/* Styles <h1> elements with the Impact font or a sans-serif fallback,
+bold font weight, and centered text alignment. */
+h1 {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: bold;
+	text-align:center;
+}
+
+/* Sets the font size of <p> elements to 18 pixels. */
+p {
+	font-size: 18px;
+}
+
+/* Styles the .card class, adding a box shadow for a subtle elevation effect.
+Sets the maximum width of the card to 400 pixels and centers it horizontally
+using auto margins. Aligns text within the card to the center. Specifies
+Verdana, Geneva, Tahoma, or a sans-serif fallback for the font family. */
+.card {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	max-width: 400px;
+	margin: auto;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styles elements with the .title class, setting the text color to a shade
+of blue (RGB 96, 173, 209) and the font size to 14 pixels. */
+.title {
+	color: rgb(96, 173, 209);
+	font-size: 14px;
+}
+
+/* Styles <button> elements, removing borders and outlines, setting
+inline-block display, adding padding, setting text color to white, background
+color to a shade of blue (RGB 28, 153, 211), aligning text to center,
+changing cursor to pointer on hover, setting width to 100%, and font size
+to 24 pixels. */
+button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: rgb(28, 153, 211);
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 24px;
+}
+
+/* Styles <a> elements, removing underline decoration and setting text color
+to a shade of blue (RGB 28, 153, 211). */
+a {
+	text-decoration: none;
+	color: rgb(28, 153, 211);
+}
+
+/* Styles elements with the .links class, adding top and bottom margins of 24 pixels. */
+.links {margin: 24px 0;}
+
+/* Changes the opacity to 0.7 for <button> and <a> elements on hover,
+creating a slight transparency effect. */
+button:hover, a:hover {
+	opacity: 0.7;
+}

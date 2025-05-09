@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
+		.balloon {
+			--triangle-color: hsl(2, 80%, 47%); /* Initial color for the triangle */
+			width: 200px;
+			height: 200px;
+			border-radius: 80%;
+			background-color: hsl(5,90%,51%);
+			display: inline-block;
+			position: relative;
+			box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+			margin:20px 30px;
+			transition:transform 0.5s ease;
+			z-index:10;
+			animation:balloons 4s ease-in-out infinite;
+			transform-origin:bottom center;
+		}
+		@keyframes balloons {
+			0%,100%{ transform:translateY(0) rotate(-4deg); }
+			50%{ transform:translateY(-25px) rotate(4deg); }
+		}
+		.balloon:before {
+			content:"▲";
+			font-size:20px;
+			color:var(--triangle-color); /* Use CSS variable for triangle color */
+			display:block;
+			text-align:center;
+			width:100%;
+			position:absolute;
+			bottom:-12px;
+			z-index:-100;
+		}
+		.balloon-string {
+			display:inline-block;
+			top:200px;
+			position:relative;
+			height:250px;
+			width:1px;
+			margin:0 auto;
+			background:rgba(0,0,0,0.2);
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const balloon = document.querySelector('.balloon');
+			const balloonString = document.querySelector('.balloon-string');
+			let size = 200; // Initial size of the balloon
+			let topPos = 200; // Initial topPos of the string
+			let colorIndex = 0; // Index to track color change
+			const colors = ['red', 'green', 'blue']; // Colors for the balloon
+			const triangleColors = ['hsl(2, 70%, 30%)', 'hsl(85, 70%, 30%)', 'hsl(200, 70%, 30%)']; // Colors for the balloon triangle
+			function changeBalloon(adjust){
+				balloon.style.width = size + 'px'; // Concat the size and 'px' and sets the balloon width
+				balloon.style.height = size + 'px'; // Concat the size and 'px' and sets the balloon height
+				colorIndex = (colorIndex + adjust) % colors.length; // Cycle through colors
+				balloon.style.backgroundColor = colors[colorIndex]; // Set the backgroundColor
+				balloon.style.setProperty('--triangle-color', triangleColors[colorIndex]); // Update CSS variable
+				balloonString.style.top = size + 'px'; // Update balloon-string top position
+				balloonString.style.height = size + 'px'; // Match balloon-string height to balloon
+			}
+			balloon.style.width = size + 'px';
+			balloon.style.height = size + 'px';
+			balloon.addEventListener('click', () => {
+				size += 10; // Increases the balloon size by 10px
+				if (size > 420) {
+					size = 200; // Reset size if it exceeds 420px
+					colorIndex = 0; // Reset color index to red (colors[0])
+				}
+				changeBalloon(1); // calls the changeBallon() incrementing the color index in 1
+			});
+			balloon.addEventListener('mouseover', () => {
+				balloon.style.transition = 'width 0.3s, height 0.3s'; // Add transition effect
+			});
+			balloon.addEventListener('mouseleave', () => {
+				size -= 5; // Decreases the balloon size by 10px
+				if (size < 200) {
+					size = 200; // Ensure minimum size is 200px
+					return;
+				}
+				changeBalloon(- 1 + colors.length); // Calls the changeBallon() incrementing the color index in 1
+			});
+		});
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Explode this balloon</title>
+</head>
+<body>
+	<div class="balloon">
+		<div class="balloon-string"></div>
+	</div>
+</body>
+</html>

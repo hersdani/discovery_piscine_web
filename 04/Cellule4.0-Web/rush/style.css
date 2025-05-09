@@ -1,0 +1,155 @@
+/* Reset default styles */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Reset default styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+body {
+	margin: 20px;
+	background: hsl(70, 31%, 85%);
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table1 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.row1 {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 10px;
+	flex: 1 0 calc(50% - 20px); /* Two columns, each taking half the width with margin */
+	max-width: calc(50% - 20px); /* Maximum width for each column */
+	padding: 10px;
+}
+
+.td1, .td2 {
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+.card {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.card img {
+	max-width: 100%; /* Ensure images don't exceed their container's width */
+	height: auto; /* Maintain aspect ratio */
+	border-radius: 50%; /* Round the image */
+}
+
+.card h2 {
+	font-size: 24px; /* Adjust the font size as needed */
+	line-height: 1.5; /* Adjust the line spacing as needed */
+	margin-bottom: 10px; /* Optional: Add some space below the name */
+}
+
+.card .title {
+	font-size: 18px; /* Adjust the font size as needed */
+	line-height: 1.2; /* Adjust the line spacing as needed */
+	margin-bottom: 20px; /* Optional: Add more space below the title */
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+	.row1 {
+		flex: 1 0 calc(100% - 20px); /* Full width for single column layout */
+		max-width: calc(100% - 20px);
+	}
+	.card {
+		margin-bottom: 20px; /* Add space between cards */
+	}
+}
+
+
+/* Styles <button> elements, removing borders and outlines, setting
+inline-block display, adding padding, setting text color to white, background
+color to a shade of blue (RGB 28, 153, 211), aligning text to center,
+changing cursor to pointer on hover, setting width to 100%, and font size
+to 24 pixels. */
+button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: rgb(28, 153, 211);
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 24px;
+}
+
+/* Styles <a> elements, removing underline decoration and setting text color
+to a shade of blue (RGB 28, 153, 211). */
+a {
+	text-decoration: none;
+	color: rgb(28, 153, 211);
+}
+
+/* Styles elements with the .links class, adding top and bottom margins of 24 pixels. */
+.links {margin: 24px 0;}
+
+/* Changes the opacity to 0.7 for <button> and <a> elements on hover,
+creating a slight transparency effect. */
+button:hover, a:hover {
+	opacity: 0.7;
+}

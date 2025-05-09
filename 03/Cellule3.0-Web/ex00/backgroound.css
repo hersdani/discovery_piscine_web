@@ -1,0 +1,74 @@
+/* Sets the padding and margin of the entire document to 0. Sets the initial
+background color of the body to white (#ffffff). */
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff
+}
+
+/* Styles a container with a width of 85% of the viewport width and a height
+of 100% of the viewport height. Uses flexbox to center its contents both
+horizontally and vertically. Centers the text within the container.
+Centers the container horizontally using auto margins. */
+.container {
+	width: 85%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+}
+
+/* Sets the font size of <h1> elements to 1rem (16px by default). */
+h1 {
+	font-size: 1rem;
+}
+
+/* Sets the font size of <h2> elements to 0.9rem (14.4px by default). Adds a
+top margin of 10% and a bottom margin of 0. Sets the text color to white and
+the background color to black. */
+h2 {
+	font-size: 0.9rem;
+	margin: 10% 0;
+	color: white;
+	background-color: black;
+}
+
+/* Styles a button with padding on all sides, no border, a border radius of
+5px for rounded corners, a text color of #0f5257, a font size of 1rem (16px
+by default), and a pointer cursor. */
+.btn-color {
+	padding: 3% 3%;
+	border: none;
+	border-radius: 5px;
+	color: #0f5257;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+/* Applies the following styles when the screen width is at least 992px
+(large laptops):
+Sets the width of the container to 100vw (100% of the viewport width) and centers it horizontally.
+Increases the font size of <h1> elements to 2.5rem (40px by default).
+Increases the font size of <h2> elements to 1.8rem (28.8px by default).
+Adjusts the padding, margin, font size, and font weight of the button. */
+@media screen and (min-width: 992px) {
+	/* For Large Laptops */
+	.container {
+	  width: 100vw;
+	  margin: auto;
+	}
+	h1 {
+	  font-size: 2.5rem;
+	}
+	h2 {
+	  font-size: 1.8rem;
+	}
+	.btn-color {
+	  padding: 2% 2%;
+	  margin: auto;
+	  font-size: 1.7rem;
+	  font-weight: bold;
+	}
+  }
